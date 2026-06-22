@@ -15,7 +15,6 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -26,12 +25,6 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-}
-
-h1, h2, h3 {
-  font-family: 'Cormorant Garant', serif;
-  font-weight: 600;
-  line-height: 1.15;
 }
 
 a {
@@ -57,56 +50,16 @@ nav {
   height: 68px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .site-name {
   font-family: 'Cormorant Garant', serif;
   font-size: 1.25rem;
-  font-weight: 600;
   color: var(--text);
-  letter-spacing: 0.02em;
   transition: opacity 0.2s;
 }
 
 .site-name:hover { opacity: 0.65; }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-nav ul a {
-  font-size: 0.78rem;
-  letter-spacing: 0.09em;
-  text-transform: lowercase;
-  color: var(--muted);
-  position: relative;
-  padding-bottom: 2px;
-  transition: color 0.2s;
-}
-
-nav ul a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 0;
-  background: var(--accent);
-  transition: width 0.25s ease;
-}
-
-nav ul a:hover,
-nav ul a.active {
-  color: var(--text);
-}
-
-nav ul a:hover::after,
-nav ul a.active::after {
-  width: 100%;
-}
 
 
 /* ── Main layout ────────────────────────── */
@@ -117,14 +70,8 @@ main {
   padding: 5rem 2rem 8rem;
 }
 
-.page-title {
-  font-size: 2.75rem;
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.01em;
-}
 
-
-/* ── About page ─────────────────────────── */
+/* ── About ──────────────────────────────── */
 
 .bio {
   font-size: 1.05rem;
@@ -132,14 +79,9 @@ main {
   margin-bottom: 3.5rem;
 }
 
-.bio p + p {
-  margin-top: 1.25rem;
-}
-
 .social-links {
   display: flex;
   gap: 1.25rem;
-  flex-wrap: wrap;
 }
 
 .social-link {
@@ -168,278 +110,9 @@ main {
 }
 
 
-/* ── Classes page ───────────────────────── */
-
-.classes-intro {
-  font-size: 1rem;
-  color: var(--muted);
-  margin-bottom: 3rem;
-  line-height: 1.7;
-}
-
-.classes-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.class-item {
-  display: grid;
-  grid-template-columns: 7rem 1fr;
-  gap: 1rem;
-  padding: 1.75rem 0;
-  border-bottom: 1px solid var(--border);
-  align-items: start;
-}
-
-.class-item:first-child {
-  border-top: 1px solid var(--border);
-}
-
-.class-day {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding-top: 0.3rem;
-}
-
-.class-name {
-  font-size: 1.2rem;
-  margin-bottom: 0.35rem;
-}
-
-.class-meta {
-  font-size: 0.83rem;
-  color: var(--muted);
-}
-
-.class-meta span + span::before {
-  content: ' · ';
-}
-
-.classes-note {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.classes-note a {
-  color: var(--accent);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1px;
-  transition: border-color 0.2s;
-}
-
-.classes-note a:hover {
-  border-color: var(--accent);
-}
-
-
-/* ── Blog listing ───────────────────────── */
-
-.post-list {
-  list-style: none;
-}
-
-.post-entry {
-  border-bottom: 1px solid var(--border);
-}
-
-.post-entry:first-child {
-  border-top: 1px solid var(--border);
-}
-
-.post-entry a {
-  display: block;
-  padding: 1.75rem 0;
-  color: var(--text);
-  transition: padding-left 0.2s;
-}
-
-.post-entry a:hover {
-  padding-left: 0.35rem;
-}
-
-.post-entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.post-title {
-  font-family: 'Cormorant Garant', serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  transition: color 0.2s;
-  line-height: 1.2;
-}
-
-.post-entry a:hover .post-title {
-  color: var(--accent);
-}
-
-.post-date {
-  font-size: 0.78rem;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-  flex-shrink: 0;
-  font-weight: 300;
-}
-
-.post-excerpt {
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.post-arrow {
-  display: inline-block;
-  margin-left: 0.2rem;
-  transition: transform 0.2s;
-}
-
-.post-entry a:hover .post-arrow {
-  transform: translateX(5px);
-}
-
-.no-posts {
-  color: var(--muted);
-  font-size: 0.9rem;
-  padding: 3rem 0;
-}
-
-
-/* ── Single post ────────────────────────── */
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.07em;
-  color: var(--muted);
-  margin-bottom: 4rem;
-  transition: color 0.2s;
-}
-
-.back-link:hover {
-  color: var(--text);
-}
-
-.back-arrow {
-  display: inline-block;
-  transition: transform 0.2s;
-}
-
-.back-link:hover .back-arrow {
-  transform: translateX(-3px);
-}
-
-.post-content h1 {
-  font-size: 2.5rem;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.6rem;
-}
-
-.post-content .post-meta-line {
-  font-size: 0.78rem;
-  color: var(--muted);
-  letter-spacing: 0.05em;
-  margin-bottom: 3rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.post-content h2 {
-  font-size: 1.6rem;
-  margin-top: 2.75rem;
-  margin-bottom: 1rem;
-}
-
-.post-content h3 {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.post-content p {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.post-content em { font-style: italic; }
-
-.post-content strong {
-  font-weight: 400;
-  color: var(--text);
-}
-
-.post-content blockquote {
-  border-left: 2px solid var(--accent);
-  padding-left: 1.5rem;
-  color: var(--muted);
-  font-style: italic;
-  margin: 2rem 0;
-}
-
-.post-content blockquote p {
-  margin-bottom: 0;
-}
-
-.post-content ul,
-.post-content ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.post-content li {
-  margin-bottom: 0.4rem;
-}
-
-.post-content hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 3rem 0;
-}
-
-.loading-text {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-
 /* ── Responsive ─────────────────────────── */
 
 @media (max-width: 520px) {
-  nav {
-    padding: 0 1.25rem;
-  }
-
-  nav ul {
-    gap: 1.25rem;
-  }
-
-  main {
-    padding: 3.5rem 1.25rem 6rem;
-  }
-
-  .page-title {
-    font-size: 2.25rem;
-  }
-
-  .class-item {
-    grid-template-columns: 5.5rem 1fr;
-    gap: 0.75rem;
-  }
-
-  .post-entry-header {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
+  nav { padding: 0 1.25rem; }
+  main { padding: 3.5rem 1.25rem 6rem; }
 }
