@@ -79,6 +79,10 @@ main {
   margin-bottom: 3.5rem;
 }
 
+.bio p + p {
+  margin-top: 2rem;
+}
+
 .social-links {
   display: flex;
   gap: 1.25rem;
