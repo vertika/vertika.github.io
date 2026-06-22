@@ -83,12 +83,6 @@ main {
   margin-top: 2rem;
 }
 
-.stay-tuned {
-  margin-top: 3.5rem;
-  font-size: 1.05rem;
-  line-height: 1.85;
-}
-
 .social-links {
   display: flex;
   gap: 1.25rem;
