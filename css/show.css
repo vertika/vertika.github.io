@@ -1,0 +1,132 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:     #0b0a09;
+  --text:   #f2ede9;
+  --muted:  #a89a92;
+  --accent: #e0a08d;
+  --border: #2a2622;
+  --max-w:  460px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ── Poster ──────────────────────────────── */
+
+.poster {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+}
+
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ── Details ─────────────────────────────── */
+
+.details {
+  width: 100%;
+  text-align: center;
+  margin-top: 2.75rem;
+}
+
+.venue {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.address {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.address:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.when {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+
+.tickets {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.85rem 2.25rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tickets:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+
+/* ── Back link ───────────────────────────── */
+
+.back {
+  margin-top: 3.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.back:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+
+/* ── Responsive ──────────────────────────── */
+
+@media (max-width: 520px) {
+  main { padding: 2.75rem 1.25rem 4rem; }
+}
