@@ -5,26 +5,26 @@
 }
 
 :root {
-  --bg:     #0b0a09;
-  --text:   #f2ede9;
-  --muted:  #a89a92;
-  --accent: #e0a08d;
-  --border: #2a2622;
-  --max-w:  460px;
+  --bg:     #000000;
+  --text:   #ffffff;
+  --muted:  rgba(255, 255, 255, 0.68);
+  --accent: #df8882;
+  --max-w:  420px;
 }
 
 html {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  line-height: 1.75;
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -35,45 +35,59 @@ a {
 main {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 4rem 1.5rem 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 5rem 1.75rem 5rem;
 }
 
 
-/* ── Poster ──────────────────────────────── */
+/* ── Title ───────────────────────────────── */
 
-.poster {
+.title-block {
   width: 100%;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
 }
 
-.poster img {
+.title-image {
   display: block;
   width: 100%;
   height: auto;
 }
 
 
-/* ── Details ─────────────────────────────── */
+/* ── Rule ────────────────────────────────── */
 
-.details {
+.rule {
+  border: none;
+  border-top: 1px solid var(--accent);
   width: 100%;
-  text-align: center;
-  margin-top: 2.75rem;
+  margin: 2.25rem 0;
 }
 
+
+/* ── Performer ───────────────────────────── */
+
+.performer-name {
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.performer-note {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+
+/* ── Details ─────────────────────────────── */
+
 .venue {
-  font-size: 1rem;
-  color: var(--text);
+  font-size: 1.05rem;
 }
 
 .address {
   color: var(--text);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   transition: color 0.2s, border-color 0.2s;
 }
 
@@ -83,19 +97,18 @@ main {
 }
 
 .when {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-top: 0.6rem;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: var(--text);
 }
 
 .tickets {
   display: inline-block;
-  margin-top: 2rem;
-  padding: 0.85rem 2.25rem;
+  margin-top: 2.25rem;
+  padding: 0.8rem 2.25rem;
   border: 1px solid var(--accent);
   border-radius: 999px;
   color: var(--accent);
-  font-family: 'Cormorant Garant', serif;
   font-size: 1.05rem;
   letter-spacing: 0.03em;
   transition: background 0.2s, color 0.2s;
@@ -110,13 +123,15 @@ main {
 /* ── Back link ───────────────────────────── */
 
 .back {
+  display: block;
   margin-top: 3.5rem;
   font-size: 0.8rem;
   letter-spacing: 0.04em;
   color: var(--muted);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   padding-bottom: 2px;
   transition: color 0.2s, border-color 0.2s;
+  width: fit-content;
 }
 
 .back:hover {
@@ -125,8 +140,35 @@ main {
 }
 
 
+/* ── Stage photo ─────────────────────────── */
+
+.stage-photo {
+  position: relative;
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.stage-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+  z-index: 1;
+}
+
+.stage-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 /* ── Responsive ──────────────────────────── */
 
 @media (max-width: 520px) {
-  main { padding: 2.75rem 1.25rem 4rem; }
+  main { padding: 3.5rem 1.25rem 4rem; }
+  .title-block { width: 90%; }
 }
