@@ -8,41 +8,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/nav.css">
   <link rel="stylesheet" href="/css/show.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="logo" href="/home.html" aria-label="Vertika Dance">
+        <span class="logo-line" aria-hidden="true">
+          <span>V</span><span>E</span><span>R</span><span>T</span><span>I</span><span>K</span><span>A</span>
+        </span>
+        <span class="logo-line" aria-hidden="true">
+          <span>D</span><span>A</span><span>N</span><span>C</span><span>E</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="site-menu" id="site-menu">
+        <a href="/home.html" class="tab">About</a>
+        <a href="/" class="tab active">Performance</a>
+      </div>
+    </nav>
+  </header>
+
   <main>
-    <div class="title-block">
+    <section class="hero">
       <picture>
-        <source srcset="/images/margam-title.webp" type="image/webp">
-        <img class="title-image" src="/images/margam-title.png" alt="Margam: a solo bharatanatyam repertoire">
+        <source srcset="/images/hero-photo.webp" type="image/webp">
+        <img src="/images/hero-photo.jpg" alt="Vertika mid-lunge on stage, arm raised, in a blue and orange costume.">
       </picture>
-    </div>
+      <div class="title-block">
+        <picture>
+          <source srcset="/images/margam-title-transparent.webp" type="image/webp">
+          <img class="title-image" src="/images/margam-title-transparent.png" alt="Margam: a solo bharatanatyam repertoire">
+        </picture>
 
-    <hr class="rule">
+        <hr class="rule">
 
-    <div class="performer-block">
-      <p class="performer-name">Vertika Srivastava</p>
-      <p class="performer-note">student of Viraja &amp; Shyamjith Kiran</p>
-    </div>
+        <div class="details">
+          <p class="venue">
+            <a class="address" href="https://maps.google.com/?q=329+Warren+St,+Jersey+City,+NJ" target="_blank" rel="noopener">Nimbus Arts Center (Theater)<br>329 Warren St, Jersey City, NJ</a>
+          </p>
+          <p class="when">Sunday, September 27, 2026<br>2:30 – 4:00 PM</p>
+        </div>
 
-    <hr class="rule">
-
-    <div class="details">
-      <p class="venue">
-        <a class="address" href="https://maps.google.com/?q=329+Warren+St,+Jersey+City,+NJ" target="_blank" rel="noopener">Nimbus Arts Center (Theater)<br>329 Warren St, Jersey City, NJ</a>
-      </p>
-      <p class="when">Sunday, September 27, 2026<br>2:30 – 4:00 PM</p>
-    </div>
-
-    <a class="tickets" href="https://buytickets.at/vertikadance/2332390" target="_blank" rel="noopener">Tickets</a>
+        <a class="tickets" href="https://buytickets.at/vertikadance/2332390" target="_blank" rel="noopener">Tickets</a>
+      </div>
+    </section>
   </main>
 
-  <div class="stage-photo">
-    <picture>
-      <source srcset="/images/stage-photo.webp" type="image/webp">
-      <img src="/images/stage-photo.jpg" alt="Vertika Srivastava mid-pose on stage under warm spotlights.">
-    </picture>
-  </div>
+  <script src="/js/nav.js" defer></script>
 </body>
 </html>
