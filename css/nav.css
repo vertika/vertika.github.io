@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,600&display=swap');
 
 /* ── Site navigation ─────────────────────────
-   Independent light palette, shared by every
-   page regardless of that page's own theme. */
+   Independent dark, moody palette, shared by
+   every page regardless of that page's own theme. */
 
 :root {
-  --nav-bg:     #fdfcfb;
-  --nav-border: #e8e3dc;
-  --nav-text:   #2b2622;
-  --nav-muted:  #a8a099;
-  --nav-accent: #b6704f;
+  --nav-bg:     #1c1714;
+  --nav-border: #2e2722;
+  --nav-text:   #ece3d8;
+  --nav-muted:  #8a7f73;
+  --nav-accent: #c17d54;
 }
 
 .site-header {
