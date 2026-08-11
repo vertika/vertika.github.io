@@ -152,9 +152,86 @@ main {
   margin-top: 2rem;
 }
 
+/* ── Watch ──────────────────────────────── */
+
+.videos {
+  margin-bottom: 3.5rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--border);
+  cursor: pointer;
+}
+
+.video-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.video-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.video-card:hover .video-thumb {
+  transform: scale(1.04);
+  filter: brightness(0.7);
+}
+
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(23, 19, 15, 0.55);
+  color: var(--accent);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.video-play svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  margin-left: 2px;
+}
+
+.video-card:hover .video-play,
+.video-card:focus-visible .video-play {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.video-card iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .social-links {
   display: flex;
   gap: 1.25rem;
+  margin-bottom: 3.5rem;
 }
 
 .social-link {
@@ -197,4 +274,6 @@ main {
   }
 
   .intro-name { font-size: 1.6rem; }
+
+  .video-grid { grid-template-columns: 1fr; }
 }
