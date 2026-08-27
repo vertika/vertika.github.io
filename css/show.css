@@ -9,7 +9,8 @@
   --text:   #ffffff;
   --muted:  rgba(255, 255, 255, 0.68);
   --accent: #df8882;
-  --max-w:  420px;
+  /* Comfortable reading measure: ~58 characters per line. */
+  --measure: 30rem;
 }
 
 html {
@@ -59,11 +60,9 @@ a {
 }
 
 .hero .title-block {
-  position: absolute;
-  left: 1.75rem;
-  right: 1.75rem;
-  top: 1.75rem;
+  position: relative;
   z-index: 1;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -86,7 +85,35 @@ a {
   border: none;
   border-top: 1px solid var(--accent);
   width: 321px;
+  max-width: 100%;
   margin: 2.25rem 0;
+}
+
+
+/* ── Blurb ───────────────────────────────── */
+
+.blurb {
+  max-width: min(var(--measure), 100%);
+  margin-bottom: 2.75rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.blurb p + p {
+  margin-top: 1.5rem;
+}
+
+.blurb a,
+.sample-note a {
+  border-bottom: 1px solid rgba(223, 136, 130, 0.45);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.blurb a:hover,
+.sample-note a:hover {
+  color: var(--text);
+  border-color: var(--text);
 }
 
 
@@ -131,6 +158,16 @@ a {
 }
 
 
+/* ── Sample-video note ───────────────────── */
+
+.sample-note {
+  max-width: min(var(--measure), 100%);
+  margin-top: 1.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+
 /* ── Back link ───────────────────────────── */
 
 .back {
@@ -155,16 +192,13 @@ a {
 
 @media (min-width: 900px) {
   .hero .title-block {
-    left: 15%;
-    right: auto;
-    top: 10%;
+    /* Indent with the viewport, but stop drifting on ultra-wide screens. */
+    padding: 10vh clamp(2rem, 15%, 11rem);
   }
 }
 
 @media (max-width: 520px) {
   .hero .title-block {
-    left: 1.25rem;
-    right: 1.25rem;
-    top: 1.25rem;
+    padding: 1.25rem;
   }
 }
