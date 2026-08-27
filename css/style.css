@@ -156,6 +156,8 @@ main {
 
 .videos {
   margin-bottom: 3.5rem;
+  /* Clear the sticky header when linked to as #watch. */
+  scroll-margin-top: 6rem;
 }
 
 .video-grid {
@@ -228,34 +230,48 @@ main {
   border: none;
 }
 
+
+/* ── Social ─────────────────────────────── */
+
 .social-links {
   display: flex;
-  gap: 1.25rem;
-  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 4.5rem;
+}
+
+.social-label {
+  flex: 0 0 100%;
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .social-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.07em;
-  text-transform: lowercase;
-  color: var(--muted);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+  gap: 0.55rem;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.social-link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  transform: translateX(2px);
+.social-link:hover,
+.social-link:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
 }
 
 .social-link svg {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
