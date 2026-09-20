@@ -308,6 +308,8 @@ a {
      so dim it uniformly against the black body background for legibility. */
   .hero > picture > img {
     opacity: 0.45;
+    /* Shift the visible crop down so the dancer sits lower under the title. */
+    object-position: center 25%;
   }
 }
 
