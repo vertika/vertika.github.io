@@ -303,6 +303,14 @@ a {
   }
 }
 
+@media (max-width: 899px) {
+  /* On narrow screens the text column runs the full height of the photo,
+     so dim it uniformly against the black body background for legibility. */
+  .hero > picture > img {
+    opacity: 0.45;
+  }
+}
+
 @media (max-width: 520px) {
   .hero .title-block {
     padding: 1.25rem;
