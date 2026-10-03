@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Margam — Vertika Srivastava</title>
-  <meta name="description" content="Margam: a solo bharatanatyam repertoire by Vertika Srivastava. Sunday, September 27, 2026 at Nimbus Arts Center, Jersey City, NJ.">
+  <title>Vertika Srivastava</title>
+  <meta name="description" content="Vertika Srivastava is a bharatanatyam dancer, choreographer, and software engineer.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/nav.css">
-  <link rel="stylesheet" href="/css/show.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="site-nav">
-      <a class="logo" href="/home.html" aria-label="Vertika Dance">
+      <a class="logo" href="/" aria-label="Vertika Dance">
         <span class="logo-line" aria-hidden="true">
           <span>V</span><span>E</span><span>R</span><span>T</span><span>I</span><span>K</span><span>A</span>
         </span>
@@ -28,60 +28,145 @@
         <span></span>
       </button>
       <div class="site-menu" id="site-menu">
-        <a href="/home.html" class="tab">About</a>
-        <a href="/" class="tab active">Performance</a>
+        <a href="/" class="tab active">About</a>
+        <a href="/performance" class="tab">Performance</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <picture>
-        <source srcset="/images/hero-photo.webp" type="image/webp">
-        <img src="/images/hero-photo.jpg" alt="Vertika mid-lunge on stage, arm raised, in a blue and orange costume.">
-      </picture>
-      <div class="title-block">
-        <picture>
-          <source srcset="/images/margam-title-transparent.webp" type="image/webp">
-          <img class="title-image" src="/images/margam-title-transparent.png" alt="Margam: a solo bharatanatyam repertoire">
-        </picture>
-
-        <hr class="rule">
-
-        <div class="blurb">
-          <p>You are cordially invited to an evening of classical Indian dance. Vertika presents a margam&mdash;the time-honored repertoire structure of Bharatanatyam. A margam unfolds like a journey, moving through story, emotion, rhythm, and movement. The evening&rsquo;s compositions are in Tamil, Telugu, and Hindi.</p>
-          <p>We would be delighted to have you join us. Kids are welcome!</p>
+    <section class="carousel" aria-roledescription="carousel" aria-label="Photos of Vertika dancing">
+      <div class="carousel-track">
+        <div class="carousel-slide" aria-hidden="false">
+          <picture>
+            <source srcset="/images/carousel/carousel-blue-saree-pose.webp" type="image/webp">
+            <img src="/images/carousel/carousel-blue-saree-pose.jpg" alt="Vertika on stage forming a hasta mudra near her face, in a blue and orange costume, against a dark background." loading="eager">
+          </picture>
         </div>
-
-        <div class="details">
-          <p class="venue">
-            <a class="address" href="https://maps.google.com/?q=329+Warren+St,+Jersey+City,+NJ" target="_blank" rel="noopener">Nimbus Arts Center (Theater)<br>329 Warren St, Jersey City, NJ</a>
-          </p>
-          <p class="when">Sunday, September 27, 2026<br>2:30 – 4:00 PM</p>
+        <div class="carousel-slide" aria-hidden="true">
+          <picture>
+            <source srcset="/images/carousel/carousel-hasta-mudra.webp" type="image/webp">
+            <img src="/images/carousel/carousel-hasta-mudra.jpg" alt="Close-up of Vertika's hands forming a bharatanatyam hasta mudra, wearing a green and magenta silk saree." loading="lazy">
+          </picture>
         </div>
-
-        <a class="tickets" href="https://buytickets.at/vertikadance/2332390" target="_blank" rel="noopener">Tickets</a>
-
-        <div class="getting-there">
-          <h2>Getting there</h2>
-          <p><strong>Parking:</strong> <a href="https://maps.google.com/?q=135+Greene+St,+Jersey+City,+NJ" target="_blank" rel="noopener">Harborside Garage 6</a>, 135 Greene St at Christopher Columbus Blvd (the Whole Foods lot), a 2-block walk. Street parking is also available.</p>
-          <p><strong>Train:</strong> 2 blocks from the Grove Street PATH stop.</p>
+        <div class="carousel-slide" aria-hidden="true">
+          <picture>
+            <source srcset="/images/carousel/carousel-ensemble.webp" type="image/webp">
+            <img src="/images/carousel/carousel-ensemble.jpg" alt="Vertika performing bharatanatyam on stage with an ensemble, in cream and maroon costumes with traditional jewelry." loading="lazy">
+          </picture>
         </div>
+        <div class="carousel-slide" aria-hidden="true">
+          <picture>
+            <source srcset="/images/carousel/carousel-spotlights.webp" type="image/webp">
+            <img src="/images/carousel/carousel-spotlights.jpg" alt="Vertika performing bharatanatyam alone on a dark stage under spotlights, in a blue and orange costume." loading="lazy">
+          </picture>
+        </div>
+        <div class="carousel-slide" aria-hidden="true">
+          <picture>
+            <source srcset="/images/carousel/carousel-green-saree.webp" type="image/webp">
+            <img src="/images/carousel/carousel-green-saree.jpg" alt="Vertika in a green and maroon silk saree, one hand extended toward the camera, against a dark grey backdrop." loading="lazy">
+          </picture>
+        </div>
+      </div>
 
-        <div class="rehearsal">
-          <h2>Rehearsal footage</h2>
-          <div class="video-card" data-video-id="-lBD6FFbDbs" tabindex="0" role="button" aria-label="Play rehearsal footage">
-            <img class="video-thumb" src="https://img.youtube.com/vi/-lBD6FFbDbs/hqdefault.jpg" alt="" loading="lazy">
-            <span class="video-play" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </span>
-          </div>
+      <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Previous photo">&#8249;</button>
+      <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next photo">&#8250;</button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Choose photo">
+        <button class="carousel-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Photo 1"></button>
+        <button class="carousel-dot" type="button" role="tab" aria-selected="false" aria-label="Photo 2"></button>
+        <button class="carousel-dot" type="button" role="tab" aria-selected="false" aria-label="Photo 3"></button>
+        <button class="carousel-dot" type="button" role="tab" aria-selected="false" aria-label="Photo 4"></button>
+        <button class="carousel-dot" type="button" role="tab" aria-selected="false" aria-label="Photo 5"></button>
+      </div>
+    </section>
+
+    <div class="bio">
+      <p>
+        <strong>Vertika Srivastava</strong> is a bharatanatyam dancer, currently based in the NY/NJ area.
+      </p>
+
+      <p>
+        She began studying bharatanatyam under Prema Sondor as a child and has been training
+        with Viraja and Shyamjith Kiran since 2018. She has performed across the country
+        with a range of ensembles—including
+        <a href="https://www.navadance.org/" target="_blank" rel="noopener">Nava Dance Theatre</a>
+        from 2014 to 2022—and as a soloist and choreographer, at venues including ODC
+        PUSHFest and SafeHouse Arts as well as in self-produced shows.
+      </p>
+
+      <p>
+        When she's not doing bharatanatyam, Vertika dabbles in other kinds of
+        movement—most enthusiastically, living room dance parties with her kid and husband.
+        Additionally, she teaches bharatanatyam in Central Jersey and works as a software engineer at
+        <a href="https://www.patreon.com" target="_blank" rel="noopener">Patreon</a>.
+      </p>
+    </div>
+
+    <div class="social-links">
+      <p class="social-label">Follow along</p>
+      <a class="social-link" href="https://www.instagram.com/vertikadance/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+        Instagram
+      </a>
+      <a class="social-link" href="https://www.youtube.com/@vertikadance" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke-linejoin="round"/>
+        </svg>
+        YouTube
+      </a>
+    </div>
+
+    <section class="videos" id="watch">
+      <div class="video-grid">
+        <div class="video-card" data-video-id="C14M1STh-RM" tabindex="0" role="button" aria-label="Play video">
+          <img class="video-thumb" src="https://img.youtube.com/vi/C14M1STh-RM/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+        <div class="video-card" data-video-id="vEVVMLSEIUM" tabindex="0" role="button" aria-label="Play video">
+          <img class="video-thumb" src="https://img.youtube.com/vi/vEVVMLSEIUM/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+        <div class="video-card" data-video-id="auylCMlDyDM" tabindex="0" role="button" aria-label="Play video">
+          <img class="video-thumb" src="https://img.youtube.com/vi/auylCMlDyDM/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+        <div class="video-card" data-video-id="-lBD6FFbDbs" tabindex="0" role="button" aria-label="Play video">
+          <img class="video-thumb" src="https://img.youtube.com/vi/-lBD6FFbDbs/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+        <div class="video-card" data-video-id="pijgPHrCXJA" tabindex="0" role="button" aria-label="Play video">
+          <img class="video-thumb" src="https://img.youtube.com/vi/pijgPHrCXJA/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+        <div class="video-card" data-video-id="DxaDJelyKfQ" tabindex="0" role="button" aria-label="Play video">
+          <img class="video-thumb" src="https://img.youtube.com/vi/DxaDJelyKfQ/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
         </div>
       </div>
     </section>
+
   </main>
 
   <script src="/js/nav.js" defer></script>
+  <script src="/js/carousel.js" defer></script>
   <script src="/js/videos.js" defer></script>
 </body>
 </html>
